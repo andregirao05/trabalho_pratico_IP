@@ -1,109 +1,109 @@
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.Scanner;
 
 class Main{
-		
     public static void main(String[] args) throws IOException {
+        Main main = new Main();
         Matriz matriz;
-        int det, ordem;
-        long inicio, fim, resultado;
+        int ordem;
+        long tempo;
 
-        Vetor ordens = new Vetor(4);
-        ordens.setElemento(0, 3);
-        ordens.setElemento(1, 5);
-        ordens.setElemento(2, 7);
-        ordens.setElemento(3, 9);
-        
-        long[][] tempoBaseline, tempoOtimizacao1, tempoOtimizacao2;
-        tempoBaseline = new long[ordens.getTamanho()][3];
-        tempoOtimizacao1 = new long[ordens.getTamanho()][3];
-        tempoOtimizacao2 = new long[ordens.getTamanho()][3];
+        int[] ordens = { 3, 5, 7, 9, 11, 13 };
+        int quantidadeMatrizes = ordens.length;
 
-        for (int i = 0; i < ordens.getTamanho(); i++) {
-            ordem = ordens.getElemento(i);
+        ManipuladorArquivo arquivoBaseline = new ManipuladorArquivo("saida_baseline.txt");
+        ManipuladorArquivo arquivoOtimizacaoV1 = new ManipuladorArquivo("saida_otimizacao_v1.txt");
+        ManipuladorArquivo arquivoOtimizacaoV2 = new ManipuladorArquivo("saida_otimizacao_v2.txt");
+
+        for (int i = 0; i < quantidadeMatrizes; i++) {
+            ordem = ordens[i];
+
+            System.out.printf("Realizando medicoes em matriz de ordem %d\n", ordem);
 
             matriz = new Matriz(ordem);
             matriz.inicializaRandomico();
-            matriz.imprime();
 
+            System.out.println("Calculando usando algoritmo baseline");
             for (int j = 0; j < 3; j++) {
-                if (ordem < 9) {
-                    inicio = System.nanoTime();
-                    det = matriz.determinante();
-                    fim = System.nanoTime();
-                } else {
-                    inicio = System.currentTimeMillis();
-                    det = matriz.determinante();
-                    fim = System.currentTimeMillis();
-                }
-                
-                resultado = fim - inicio;
-                tempoBaseline[i][j] = resultado;
+                tempo = main.medirTempoDeterminanteBaseLine(matriz);
+                arquivoBaseline.escrever(tempo + " ");
             }
+            arquivoBaseline.novaLinha();
 
+            System.out.println("Calculando usando algoritmo otimizado - vesao 1");
             for (int j = 0; j < 3; j++) {
-                if (ordem < 9) {
-                    inicio = System.nanoTime();
-                    det = matriz.determinanteOtimizadoV1();
-                    fim = System.nanoTime();
-                } else {
-                    inicio = System.currentTimeMillis();
-                    det = matriz.determinanteOtimizadoV1();
-                    fim = System.currentTimeMillis();
-                }
-                resultado = fim - inicio;
-                tempoOtimizacao1[i][j] = resultado;
+                tempo = main.medirTempoDeterminanteOtimizacaoV1(matriz);
+                arquivoOtimizacaoV1.escrever(tempo + " ");
             }
+            arquivoOtimizacaoV1.novaLinha();
 
+            System.out.println("Calculando usando algoritmo otimizado - vesao 2");
             for (int j = 0; j < 3; j++) {
-                if (ordem < 9) {
-                    inicio = System.nanoTime();
-                    det = matriz.determinanteOtimizadoV2();
-                    fim = System.nanoTime();
-                } else {
-                    inicio = System.currentTimeMillis();
-                    det = matriz.determinanteOtimizadoV2();
-                    fim = System.currentTimeMillis();
-                }
-
-                resultado = fim - inicio;
-                tempoOtimizacao2[i][j] = resultado;
+                tempo = main.medirTempoDeterminanteOtimizacaoV2(matriz);
+                arquivoOtimizacaoV2.escrever(tempo + " ");
             }
-        }
-
-        for (int i = 0; i < tempoBaseline.length; i++) {
-            for (int j = 0; j < tempoBaseline[0].length; j++) {
-                System.out.printf(tempoBaseline[i][j] + " ");
-            }
+            arquivoOtimizacaoV2.novaLinha();
 
             System.out.println();
         }
+    }
+    
+    public long medirTempoDeterminanteBaseLine(Matriz matriz) {
+        long inicio, tempo;
+        int determinante;
 
-        System.out.println();
+        int ordem = matriz.retorneOrdem();
 
-        for (int i = 0; i < tempoOtimizacao1.length; i++) {
-            for (int j = 0; j < tempoOtimizacao1[0].length; j++) {
-                System.out.printf(tempoOtimizacao1[i][j] + " ");
-            }
-
-            System.out.println();
+        if (ordem < 9) { // Mede tempo em nano segundos
+            inicio = System.nanoTime();
+            determinante = matriz.determinante();
+            tempo = System.nanoTime() - inicio;
+        } else {
+            // Mede tempo em milissegundos (para ordens superiores)
+            inicio = System.currentTimeMillis();
+            determinante = matriz.determinante();
+            tempo = System.currentTimeMillis() - inicio;
         }
 
-        System.out.println();
+        return tempo;
+    }
+    
+    public long medirTempoDeterminanteOtimizacaoV1(Matriz matriz) {
+        long inicio, tempo;
+        int determinante;
 
-        for (int i = 0; i < tempoOtimizacao2.length; i++) {
-            for (int j = 0; j < tempoOtimizacao2[0].length; j++) {
-                System.out.printf(tempoOtimizacao2[i][j] + " ");
-            }
+        int ordem = matriz.retorneOrdem();
 
-            System.out.println();
+        if (ordem < 9) { // Mede tempo em nano segundos
+            inicio = System.nanoTime();
+            determinante = matriz.determinanteOtimizadoV1();
+            tempo = System.nanoTime() - inicio;
+        } else {
+            // Mede tempo em milissegundos (para ordens superiores)
+            inicio = System.currentTimeMillis();
+            determinante = matriz.determinanteOtimizadoV1();
+            tempo = System.currentTimeMillis() - inicio;
         }
 
-        System.out.println();
+        return tempo;
+    }
+    
+    public long medirTempoDeterminanteOtimizacaoV2(Matriz matriz) {
+        long inicio, tempo;
+        int determinante;
+        
+        int ordem = matriz.retorneOrdem();
+
+        if (ordem < 9) { // Mede tempo em nano segundos
+            inicio = System.nanoTime();
+            determinante = matriz.determinanteOtimizadoV2();
+            tempo = System.nanoTime() - inicio;
+        } else {
+            // Mede tempo em milissegundos (para ordens superiores)
+            inicio = System.currentTimeMillis();
+            determinante = matriz.determinanteOtimizadoV2();
+            tempo = System.currentTimeMillis() - inicio;
+        }
+
+        return tempo;
     }
 }

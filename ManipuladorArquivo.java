@@ -4,11 +4,10 @@ import java.io.IOException;
 
 public class ManipuladorArquivo {
     private String path;
-    private BufferedWriter buffWrite;
 
     public ManipuladorArquivo(String path) throws IOException {
         this.setPath(path);
-        this.setBuffWrite(new BufferedWriter(new FileWriter(path)));
+        this.limparArquivo();
     }
 
     public String getPath() {
@@ -19,23 +18,35 @@ public class ManipuladorArquivo {
         this.path = path;
     }
 
-    public BufferedWriter getBuffWrite() {
-        return this.buffWrite;
-    }
-
-    public void setBuffWrite(BufferedWriter buffWrite) {
-        this.buffWrite = buffWrite;
-    }
-
     public void escrever(String texto) throws IOException {
-		this.getBuffWrite().append(texto);
-	}
-
-    public void close() {
-        try {
-            this.getBuffWrite().close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        FileWriter fileWriter = new FileWriter(this.getPath(), true);
+        BufferedWriter buffWrite = new BufferedWriter(fileWriter);
+        buffWrite.append(texto);
+        buffWrite.close();
     }
+    
+    public void escrever(int numero) throws IOException {
+        this.escrever(Integer.toString(numero));;
+    }
+    
+    public void novaLinha() throws IOException {
+        this.escrever("\n");
+    }
+
+    public void escreverComNovaLinha(String texto) throws IOException {
+        this.escrever(texto + "\n");
+    }
+
+    private void limparArquivo() throws IOException {
+        FileWriter fileWriter = new FileWriter(this.getPath());
+        fileWriter.close();
+    }
+
+    public static void main(String[] args) throws IOException {
+        ManipuladorArquivo arquivo = new ManipuladorArquivo("teste.txt");
+        arquivo.escreverComNovaLinha("oi");
+        arquivo.escreverComNovaLinha("qualquer coisa");
+    }
+
+
 }
