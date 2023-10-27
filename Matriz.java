@@ -174,7 +174,10 @@ class Matriz{
 	}
 
 	public Vetor buscaZeros(Matriz matriz){
-	
+		/*
+		* Retorna um vetor em que o primeiro elemento é índice da linha ou coluna com mais zeros 
+		* e o segundo elemento é igual a 0 se o índice se referir a uma linha e 1 se for uma coluna
+		*/
 		int linhaComMaisZeros = 0;
 	    int maxZerosLinha = 0;
 	    int colunaComMaisZeros = 0;
@@ -213,12 +216,12 @@ class Matriz{
 		if(maxZerosColunas < maxZerosLinha){
 			//System.out.println("linha");
 			vet.setElemento(0, linhaComMaisZeros ); //indice da linha
-			vet.setElemento(1, 0 ); // numero de zeros na linha
+			vet.setElemento(1, 0 ); // é uma linha
 		} else{
 			//System.out.println("coluna");
 			
 			vet.setElemento(0, colunaComMaisZeros ); //indice da coluna
-			vet.setElemento(1, 1 ); // numero de zeros na coluna
+			vet.setElemento(1, 1 ); // é uma coluna
 		}
 
 
@@ -236,7 +239,7 @@ class Matriz{
 
 		indexFixo = verifica.getElemento(0);
 
-		if (verifica.getElemento(1) == 0) { //Percorrer linha
+		if (verifica.getElemento(1) == 0) { // Percorrer linha
 			for(cont = 0; cont < mat.getTamanhoColuna(); cont++){
 				cofator = mat.getValor(indexFixo, cont);
 				if(cofator != 0) {

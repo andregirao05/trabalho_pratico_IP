@@ -51,8 +51,6 @@ class Main{
         long inicio, tempo;
         int determinante;
 
-        int ordem = matriz.retorneOrdem();
-
         inicio = System.nanoTime();
         determinante = matriz.determinante();
         tempo = System.nanoTime() - inicio;
@@ -66,8 +64,6 @@ class Main{
     public long medirTempoDeterminanteOtimizacaoV1(Matriz matriz) {
         long inicio, tempo;
         int determinante;
-
-        int ordem = matriz.retorneOrdem();
 
         inicio = System.nanoTime();
         determinante = matriz.determinanteOtimizadoV1();
@@ -83,8 +79,6 @@ class Main{
         long inicio, tempo;
         int determinante;
         
-        int ordem = matriz.retorneOrdem();
-
         inicio = System.nanoTime();
         determinante = matriz.determinanteOtimizadoV2();
         tempo = System.nanoTime() - inicio;
