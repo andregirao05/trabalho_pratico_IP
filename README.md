@@ -11,13 +11,15 @@ Trabalho prático para conclusão da disciplina de Introdução à Programação
 
 O programa para cálculo do determinante funciona da seguinte forma:
 
-1. É definido na classe Main um vetor de inteiros que representa as ordens matriciais que serão testadas;
+1. É definido na classe Main um vetor de inteiros que representa as ordens matriciais que serão testadas.
 
 2. Para cada ordem no vetor descrito acima:
-   2.1. Uma matriz aleatória (com valores de itens entre 0 e 2\*ordem²) é inicializada;
-   2.2. O cálculo do determinante é feito com três algoritmos (um sem otimizações, um com otimização simples e outro com otimizações extras), seus tempos de execução são medidos em _nanossegundos_ e escritos em arquivos _.txt_ de saída;
-   2.3. Para fins de debug, a cada passo feito pelo programa, informações pertinentes são impressas no prompt de comando;
-3. O passos 2 é executado três vezes.
+
+   1. Uma matriz aleatória (com valores de itens entre 0 e 2\*ordem^2) é inicializada.
+   2. O cálculo do determinante é feito com três algoritmos (um sem otimizações, um com otimização simples e outro com otimizações extras), seus tempos de execução são medidos em nanossegundos e escritos em arquivos .txt de saída.
+   3. Para fins de debug, a cada passo feito pelo programa, informações pertinentes são impressas no prompt de comando.
+
+3. O passo 2 é executado três vezes.
 
 ## Execução
 
