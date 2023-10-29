@@ -17,11 +17,6 @@ class Matriz{
 		this.setTamanhoColuna(numColunas);
 	}
 
-	Matriz(int ordem) {
-		this(ordem, ordem);
-	}
-
-
 	public int getValor(int indiceI,int indiceJ){
 		return mat[indiceI][indiceJ];
 	}	
@@ -173,11 +168,10 @@ class Matriz{
 		return det;
 	}
 
-	public Vetor buscaZeros(Matriz matriz){
-		/*
-		* Retorna um vetor em que o primeiro elemento é índice da linha ou coluna com mais zeros 
-		* e o segundo elemento é igual a 0 se o índice se referir a uma linha e 1 se for uma coluna
-		*/
+//---------------------------------OTIMIZACAO BASICA-------------------------------
+
+	public int[] buscaZeros(Matriz matriz){
+	
 		int linhaComMaisZeros = 0;
 	    int maxZerosLinha = 0;
 	    int colunaComMaisZeros = 0;
@@ -211,22 +205,22 @@ class Matriz{
 			}
 		}
 
-		Vetor vet = new Vetor(2);
+		int[] vet = new int[2];
 
 		if(maxZerosColunas < maxZerosLinha){
-			//System.out.println("linha");
-			vet.setElemento(0, linhaComMaisZeros ); //indice da linha
-			vet.setElemento(1, 0 ); // é uma linha
+			vet[0] = linhaComMaisZeros; //indica indice da linha
+			vet[1] = 0; // indicador de linha
 		} else{
-			//System.out.println("coluna");
-			
-			vet.setElemento(0, colunaComMaisZeros ); //indice da coluna
-			vet.setElemento(1, 1 ); // é uma coluna
+			vet[0] = colunaComMaisZeros; //indica indice da coluna
+			vet[1] = 1; // indicador de  coluna
 		}
 
 
 		return vet;
 	}
+
+
+
 
 	private int detOrdemNOtimizadoV1(Matriz mat){
 		int sinal,cofator,detTemp,resposta, numL, numC, indexFixo, cont;
@@ -235,11 +229,11 @@ class Matriz{
 		numC = mat.getTamanhoColuna();
 		
 		resposta = 0;
-		Vetor verifica = mat.buscaZeros(mat);
+		int[] verifica = mat.buscaZeros(mat);
 
-		indexFixo = verifica.getElemento(0);
+		indexFixo = verifica[0];
 
-		if (verifica.getElemento(1) == 0) { // Percorrer linha
+		if (verifica[1] == 0) { //Percorrer linha
 			for(cont = 0; cont < mat.getTamanhoColuna(); cont++){
 				cofator = mat.getValor(indexFixo, cont);
 				if(cofator != 0) {
@@ -250,7 +244,7 @@ class Matriz{
 					resposta = resposta + (cofator * sinal * detTemp);
 				}
 			}
-		} else { // Percorrer coluna
+		} else { //verifica[1] == 1 --> Percorrer coluna
 			for(cont = 0; cont < mat.getTamanhoLinha(); cont++){
 				cofator = mat.getValor(cont, indexFixo);
 				if(cofator != 0) {
@@ -289,6 +283,7 @@ class Matriz{
 
 		return det;
 	}
+//---------------------------------OTIMIZACAO EXTRA-------------------------------
 	
 	public boolean comparaLinhas(int linha1, int linha2) {
 		boolean ehProporcional = true;

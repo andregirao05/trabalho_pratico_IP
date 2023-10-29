@@ -3,430 +3,484 @@ MATRIZ - ORDEM 3
 
 Tentativa 1
 
+1 0 2 
 1 2 0 
-2 2 1 
-1 1 2 
+1 0 2 
 
 Calculando usando algoritmo baseline
-Determinante: -3
-Tempo: 82897 ns
+Determinante: 0
+Tempo: 44283 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -3
-Tempo: 5306013 ns
+Determinante: 0
+Tempo: 33520 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -3
-Tempo: 74672 ns
+Determinante: 0
+Tempo: 166936 ns
+Tempo: 0 ms
 
 Tentativa 2
 
-0 0 0 
-2 2 0 
-2 2 1 
+1 2 1 
+0 0 2 
+1 0 1 
 
 Calculando usando algoritmo baseline
-Determinante: 0
-Tempo: 31708 ns
+Determinante: 4
+Tempo: 107998 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 0
-Tempo: 23264 ns
+Determinante: 4
+Tempo: 6626441 ns
+Tempo: 7 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 0
-Tempo: 11018 ns
+Determinante: 4
+Tempo: 889952 ns
+Tempo: 1 ms
 
 Tentativa 3
 
-0 1 0 
-2 1 2 
-2 0 1 
+1 2 2 
+1 1 0 
+0 2 1 
 
 Calculando usando algoritmo baseline
-Determinante: 2
-Tempo: 41420 ns
+Determinante: 3
+Tempo: 163954 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 2
-Tempo: 133367 ns
+Determinante: 3
+Tempo: 19829 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 2
-Tempo: 38388 ns
+Determinante: 3
+Tempo: 31469 ns
+Tempo: 0 ms
 
 
 MATRIZ - ORDEM 5
 
 Tentativa 1
 
-4 4 2 3 1 
-1 3 4 1 0 
-4 1 3 2 1 
-1 3 2 2 3 
-0 1 1 4 2 
+0 4 4 4 3 
+4 3 3 1 4 
+1 1 0 2 3 
+3 4 4 2 3 
+2 4 2 2 3 
 
 Calculando usando algoritmo baseline
-Determinante: -464
-Tempo: 1125140 ns
+Determinante: -48
+Tempo: 338809 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -464
-Tempo: 1118708 ns
+Determinante: -48
+Tempo: 4359336 ns
+Tempo: 5 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -464
-Tempo: 302235 ns
+Determinante: -48
+Tempo: 268892 ns
+Tempo: 0 ms
 
 Tentativa 2
 
-1 4 3 4 1 
-4 0 0 0 1 
-3 0 3 2 4 
-2 0 4 0 4 
-1 0 2 3 2 
+4 4 4 2 0 
+0 1 2 4 1 
+1 1 4 1 4 
+4 2 1 3 1 
+2 4 1 2 3 
 
 Calculando usando algoritmo baseline
-Determinante: -120
-Tempo: 395046 ns
+Determinante: 936
+Tempo: 284300 ns
+Tempo: 1 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -120
-Tempo: 99448 ns
+Determinante: 936
+Tempo: 205272 ns
+Tempo: 1 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -120
-Tempo: 76408 ns
+Determinante: 936
+Tempo: 341074 ns
+Tempo: 0 ms
 
 Tentativa 3
 
-2 0 4 4 0 
-3 3 2 2 3 
-2 3 3 2 0 
-3 1 0 1 4 
-4 1 4 4 1 
+0 2 2 3 4 
+0 3 3 1 3 
+0 2 4 0 0 
+0 1 2 1 2 
+4 0 1 3 2 
 
 Calculando usando algoritmo baseline
-Determinante: 0
-Tempo: 1198966 ns
+Determinante: 64
+Tempo: 276817 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 0
-Tempo: 392265 ns
+Determinante: 64
+Tempo: 161724 ns
+Tempo: 0 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 0
-Tempo: 929878 ns
+Determinante: 64
+Tempo: 138447 ns
+Tempo: 0 ms
 
 
 MATRIZ - ORDEM 7
 
 Tentativa 1
 
-4 6 4 1 1 3 6 
-5 5 4 0 2 1 6 
-2 1 4 0 5 3 0 
-0 1 4 0 0 6 2 
-1 2 3 6 0 5 2 
-6 2 6 2 0 5 3 
-5 2 2 6 4 0 2 
+2 6 1 6 5 1 2 
+0 0 0 2 1 2 1 
+6 5 6 6 5 6 0 
+4 1 4 2 1 1 0 
+3 1 3 1 4 2 2 
+1 5 6 6 3 2 4 
+4 3 4 4 1 4 2 
 
 Calculando usando algoritmo baseline
-Determinante: -7419
-Tempo: 12003803 ns
+Determinante: -13430
+Tempo: 7450144 ns
+Tempo: 7 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -7419
-Tempo: 2160586 ns
+Determinante: -13430
+Tempo: 4737705 ns
+Tempo: 5 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -7419
-Tempo: 1783198 ns
+Determinante: -13430
+Tempo: 7199562 ns
+Tempo: 7 ms
 
 Tentativa 2
 
-0 4 5 1 6 1 1 
-0 5 5 1 1 0 3 
-6 1 6 6 0 2 6 
-6 2 1 0 4 4 5 
-6 2 6 3 2 1 5 
-4 0 3 3 3 1 3 
-3 3 4 3 1 0 1 
+1 1 2 6 0 5 5 
+5 5 1 1 5 6 5 
+6 2 6 1 4 0 2 
+2 0 0 0 0 2 3 
+4 6 1 5 3 6 6 
+2 4 3 2 3 1 5 
+3 2 1 0 0 1 2 
 
 Calculando usando algoritmo baseline
-Determinante: -9765
-Tempo: 3576999 ns
+Determinante: -9820
+Tempo: 10134753 ns
+Tempo: 10 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -9765
-Tempo: 2216510 ns
+Determinante: -9820
+Tempo: 1229867 ns
+Tempo: 1 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -9765
-Tempo: 3299060 ns
+Determinante: -9820
+Tempo: 2126376 ns
+Tempo: 2 ms
 
 Tentativa 3
 
-4 5 5 2 0 3 0 
-3 6 5 1 4 4 4 
-5 5 3 2 1 4 2 
-6 6 6 2 1 1 6 
-1 0 3 1 1 6 3 
-3 1 2 2 4 2 5 
-2 0 0 6 3 0 3 
+1 5 4 2 5 6 3 
+0 2 4 5 3 4 5 
+6 5 6 6 0 0 4 
+1 0 1 4 5 4 6 
+1 6 5 1 1 1 5 
+2 6 5 0 3 2 6 
+0 0 1 5 5 0 6 
 
 Calculando usando algoritmo baseline
-Determinante: -31122
-Tempo: 3367071 ns
+Determinante: -20920
+Tempo: 17412725 ns
+Tempo: 17 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -31122
-Tempo: 3479014 ns
+Determinante: -20920
+Tempo: 1025762 ns
+Tempo: 1 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -31122
-Tempo: 1728414 ns
+Determinante: -20920
+Tempo: 20102736 ns
+Tempo: 20 ms
 
 
 MATRIZ - ORDEM 9
 
 Tentativa 1
 
-6 1 7 7 2 6 8 4 4 
-6 8 8 6 1 0 0 8 3 
-2 1 0 5 4 0 0 3 5 
-1 1 3 5 4 3 0 0 1 
-6 8 1 7 3 8 5 4 3 
-5 1 0 0 1 5 0 3 6 
-0 3 8 3 6 6 8 8 8 
-3 7 8 4 3 6 3 0 4 
-8 5 2 5 6 4 4 1 4 
+0 0 5 5 7 7 3 4 8 
+6 7 3 2 6 8 1 8 6 
+4 8 4 5 8 7 6 1 0 
+7 7 6 5 4 5 7 4 5 
+3 8 7 7 1 6 5 3 5 
+3 1 0 7 1 3 2 8 5 
+7 2 8 4 2 3 4 5 0 
+8 0 1 3 6 7 8 7 7 
+7 2 8 6 5 4 1 2 6 
 
 Calculando usando algoritmo baseline
-Determinante: 67119665
-Tempo: 206732640 ns
+Determinante: -56095238
+Tempo: 229005678 ns
+Tempo: 229 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 67119665
-Tempo: 72189473 ns
+Determinante: -56095238
+Tempo: 56645016 ns
+Tempo: 57 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 67119665
-Tempo: 90807916 ns
+Determinante: -56095238
+Tempo: 41582610 ns
+Tempo: 41 ms
 
 Tentativa 2
 
-7 3 6 0 8 3 6 0 3 
-4 4 5 0 6 8 8 0 5 
-5 5 6 0 4 4 5 5 2 
-2 8 7 7 1 1 8 7 1 
-1 0 0 2 2 7 8 8 0 
-2 7 5 1 7 7 7 6 7 
-7 8 1 8 7 5 5 4 6 
-2 7 4 6 7 5 3 6 4 
-0 3 1 4 3 4 7 6 3 
+7 4 3 2 3 8 1 7 6 
+8 6 0 3 2 1 7 5 3 
+3 8 1 5 3 6 5 5 5 
+0 1 5 4 2 7 0 2 5 
+4 4 0 7 4 1 2 2 4 
+8 7 7 1 0 2 2 6 8 
+6 4 4 5 3 0 1 0 7 
+1 2 8 1 2 8 8 4 6 
+7 6 3 0 4 0 3 3 1 
 
 Calculando usando algoritmo baseline
-Determinante: -1238796
-Tempo: 192071470 ns
+Determinante: 5330229
+Tempo: 82271042 ns
+Tempo: 82 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -1238796
-Tempo: 44340848 ns
+Determinante: 5330229
+Tempo: 42703385 ns
+Tempo: 43 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -1238796
-Tempo: 49588223 ns
+Determinante: 5330229
+Tempo: 50195566 ns
+Tempo: 51 ms
 
 Tentativa 3
 
-7 4 4 6 5 5 8 4 1 
-3 5 7 5 3 5 5 5 6 
-5 0 3 4 7 5 4 6 2 
-3 5 1 4 4 7 2 2 3 
-6 7 7 3 1 1 5 7 0 
-2 7 6 3 5 3 2 3 8 
-5 0 1 5 3 1 1 3 4 
-3 3 3 4 8 1 8 3 4 
-3 6 3 1 6 5 4 4 0 
+5 7 6 7 0 2 1 5 4 
+7 3 3 2 5 5 1 6 6 
+3 8 0 8 8 5 2 1 3 
+5 0 6 7 2 1 0 4 2 
+1 5 0 7 3 5 8 8 1 
+0 0 2 4 8 5 1 0 5 
+4 0 2 8 4 5 2 6 4 
+7 4 7 2 3 0 8 7 1 
+5 6 1 7 8 3 5 1 0 
 
 Calculando usando algoritmo baseline
-Determinante: 127503
-Tempo: 136853351 ns
+Determinante: 2527158
+Tempo: 116632163 ns
+Tempo: 117 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 127503
-Tempo: 80956384 ns
+Determinante: 2527158
+Tempo: 34998095 ns
+Tempo: 35 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 127503
-Tempo: 74940676 ns
+Determinante: 2527158
+Tempo: 29350616 ns
+Tempo: 29 ms
 
 
 MATRIZ - ORDEM 11
 
 Tentativa 1
 
-6 9 4 10 4 1 5 4 7 0 5 
-2 5 0 3 0 3 0 3 7 8 0 
-10 1 4 3 6 4 4 9 2 6 3 
-0 10 6 7 10 8 4 3 8 3 5 
-5 2 3 7 0 7 5 8 7 9 6 
-10 5 4 3 0 8 8 9 10 10 7 
-7 3 7 8 1 5 6 1 6 8 10 
-9 3 10 8 9 1 3 7 1 1 1 
-3 8 5 2 0 10 3 5 2 7 3 
-0 3 4 6 9 9 0 4 0 8 7 
-4 6 9 5 9 8 3 2 0 5 1 
+4 7 4 5 1 7 3 4 9 8 4 
+2 1 2 4 3 3 1 5 7 9 1 
+2 10 3 7 1 1 0 3 3 7 7 
+5 7 1 1 7 1 2 2 1 2 8 
+4 5 10 5 8 2 4 8 3 2 5 
+8 3 3 1 2 4 9 5 6 3 10 
+3 2 9 6 5 6 8 5 8 9 2 
+10 7 3 3 8 7 9 2 3 1 1 
+2 6 5 5 2 7 1 3 8 5 7 
+6 0 0 4 6 4 8 9 9 2 2 
+5 0 0 1 10 8 3 3 1 3 5 
 
 Calculando usando algoritmo baseline
-Determinante: 30626084
-Tempo: 12429921270 ns
+Determinante: -2057758802
+Tempo: 10296979500 ns
+Tempo: 10297 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 30626084
-Tempo: 2329819636 ns
+Determinante: -2057758802
+Tempo: 4826241294 ns
+Tempo: 4827 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 30626084
-Tempo: 2395553368 ns
+Determinante: -2057758802
+Tempo: 4961380827 ns
+Tempo: 4962 ms
 
 Tentativa 2
 
-10 3 8 8 0 5 1 5 5 5 6 
-9 9 6 6 8 10 0 8 0 0 0 
-6 0 1 7 6 7 4 1 2 6 7 
-1 7 4 4 8 7 8 9 9 9 1 
-5 8 1 9 5 2 7 8 5 8 6 
-3 6 7 1 9 4 6 5 4 5 2 
-7 4 3 10 4 9 3 0 7 4 6 
-9 7 10 4 4 3 6 4 9 8 3 
-3 3 5 7 0 1 2 8 3 7 7 
-9 0 3 7 7 6 9 10 2 6 0 
-2 2 10 2 2 6 1 7 4 5 0 
+5 9 1 3 9 5 0 2 0 2 6 
+7 3 5 3 10 3 2 4 4 4 6 
+5 2 5 3 9 4 2 3 1 10 3 
+2 3 7 7 4 8 4 6 1 4 9 
+2 10 6 2 3 10 9 8 10 5 10 
+2 2 8 4 6 8 7 1 0 9 9 
+1 3 8 10 5 6 7 5 0 7 9 
+2 10 7 10 2 5 7 4 0 7 9 
+10 5 8 3 10 9 2 0 9 2 4 
+4 2 8 8 7 5 10 8 4 3 9 
+2 6 3 8 4 9 2 7 3 9 6 
 
 Calculando usando algoritmo baseline
-Determinante: -206290032
-Tempo: 8530076217 ns
+Determinante: -1456533466
+Tempo: 7336718657 ns
+Tempo: 7337 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -206290032
-Tempo: 2721029494 ns
+Determinante: -1456533466
+Tempo: 4279638167 ns
+Tempo: 4280 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -206290032
-Tempo: 2812744957 ns
+Determinante: -1456533466
+Tempo: 4338109429 ns
+Tempo: 4338 ms
 
 Tentativa 3
 
-10 5 3 3 4 6 10 7 4 8 7 
-0 1 8 10 8 6 3 9 2 5 8 
-1 6 5 6 9 2 7 10 6 9 1 
-3 7 5 7 1 6 7 2 0 2 9 
-10 7 3 4 4 9 0 8 6 0 8 
-4 10 4 2 6 0 0 7 1 4 9 
-3 8 9 3 1 8 7 5 3 6 4 
-1 1 1 6 0 8 10 10 4 4 1 
-10 7 2 8 0 2 10 3 8 2 8 
-4 8 5 3 7 8 8 4 8 2 1 
-8 5 6 1 8 0 5 10 4 7 8 
+7 5 5 5 10 2 6 0 6 8 3 
+3 2 1 9 5 3 4 3 1 2 7 
+7 6 4 5 5 2 5 1 10 2 10 
+4 10 0 3 5 0 3 4 10 9 1 
+10 2 9 9 10 8 9 5 9 3 0 
+7 7 9 10 7 1 3 10 4 5 3 
+1 6 2 7 4 4 1 9 5 6 10 
+5 0 10 6 3 4 5 2 8 0 4 
+3 4 3 9 3 4 6 10 5 6 7 
+5 8 2 0 7 7 8 9 4 8 6 
+8 3 6 0 5 5 6 6 10 10 5 
 
 Calculando usando algoritmo baseline
-Determinante: 1824921056
-Tempo: 7544198136 ns
+Determinante: -1729151926
+Tempo: 7206334937 ns
+Tempo: 7206 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 1824921056
-Tempo: 3368475895 ns
+Determinante: -1729151926
+Tempo: 3974137700 ns
+Tempo: 3974 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 1824921056
-Tempo: 3764947858 ns
+Determinante: -1729151926
+Tempo: 3978193763 ns
+Tempo: 3978 ms
 
 
 MATRIZ - ORDEM 13
 
 Tentativa 1
 
-11 2 9 1 5 12 9 3 0 7 8 6 9 
-0 7 3 10 10 8 1 8 0 8 0 9 6 
-4 12 4 2 11 3 0 4 7 12 6 7 9 
-11 0 2 12 10 1 4 11 12 7 11 9 8 
-0 7 12 2 7 2 3 4 10 6 11 9 6 
-3 12 5 11 9 4 6 11 7 10 8 12 12 
-1 2 8 3 5 6 7 11 9 0 4 11 12 
-10 5 12 11 8 5 9 5 3 0 8 6 3 
-0 8 5 9 5 8 5 1 4 2 6 8 2 
-5 12 7 0 4 1 1 12 1 10 1 11 9 
-11 12 1 9 4 9 3 6 5 9 9 1 8 
-4 5 10 10 3 4 8 1 4 3 12 6 10 
-8 11 3 1 9 0 1 12 4 1 8 12 3 
+7 1 9 11 12 5 9 4 9 10 0 12 3 
+2 8 6 9 4 3 7 7 5 5 4 0 5 
+6 6 8 12 5 7 2 4 4 6 5 3 10 
+1 3 4 9 11 4 4 10 7 11 0 0 12 
+7 9 1 8 4 11 11 4 1 2 2 4 8 
+4 3 11 9 1 0 3 7 11 12 10 6 8 
+8 11 11 2 11 9 11 1 1 1 9 4 8 
+7 3 10 12 1 3 0 6 2 12 12 3 6 
+5 1 11 9 7 10 5 9 8 2 3 4 12 
+8 12 8 1 11 11 10 12 0 1 9 4 11 
+2 12 6 6 6 3 6 0 6 8 7 11 11 
+12 4 10 3 5 2 9 11 11 9 12 1 0 
+8 4 9 5 9 12 5 8 4 9 11 1 0 
 
 Calculando usando algoritmo baseline
-Determinante: -103235563
-Tempo: 1079130850833 ns
+Determinante: 400546464
+Tempo: 1104894652384 ns
+Tempo: 1104894 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: -103235563
-Tempo: 438767739538 ns
+Determinante: 400546464
+Tempo: 531570230276 ns
+Tempo: 531570 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: -103235563
-Tempo: 435096419868 ns
+Determinante: 400546464
+Tempo: 533706785792 ns
+Tempo: 533707 ms
 
 Tentativa 2
 
-5 6 3 9 11 7 1 9 12 1 4 7 4 
-0 10 8 2 12 0 0 12 3 5 7 8 1 
-11 3 3 7 6 10 3 7 11 4 12 5 12 
-4 3 9 1 3 2 8 12 7 12 7 9 3 
-6 7 6 3 10 4 7 12 3 3 1 12 11 
-1 5 8 3 10 3 2 12 0 11 3 5 4 
-7 2 5 11 3 10 0 11 11 6 11 12 6 
-0 6 2 11 8 0 5 1 0 2 11 10 2 
-4 12 8 10 2 11 2 5 2 3 1 2 3 
-12 4 6 7 1 7 5 1 10 12 8 4 10 
-12 10 8 5 9 6 0 0 7 5 9 4 4 
-3 0 9 0 12 7 7 4 11 12 9 6 11 
-12 8 9 7 8 4 1 3 2 6 4 9 8 
+11 3 1 10 3 3 11 8 6 10 2 4 9 
+10 4 11 11 9 6 0 12 2 9 1 12 3 
+11 9 1 7 3 8 7 2 10 9 8 0 6 
+7 11 4 5 1 1 9 9 3 9 11 1 0 
+7 7 8 2 3 9 6 5 8 9 7 8 4 
+7 4 8 8 10 12 5 9 10 9 5 5 0 
+3 1 0 2 2 6 11 5 9 12 3 4 2 
+5 2 0 7 3 9 2 1 4 10 6 4 7 
+11 4 4 2 6 1 11 10 8 10 7 7 1 
+10 3 6 3 7 9 5 6 3 0 0 4 4 
+5 11 6 4 11 2 1 4 0 2 5 9 4 
+1 8 12 0 8 10 11 3 12 1 9 9 7 
+8 8 11 0 11 4 0 3 1 2 3 0 6 
 
 Calculando usando algoritmo baseline
-Determinante: 2005485246
-Tempo: 1085620222460 ns
+Determinante: 1112224816
+Tempo: 1102737675447 ns
+Tempo: 1102738 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 2005485246
-Tempo: 422120993935 ns
+Determinante: 1112224816
+Tempo: 411490964267 ns
+Tempo: 411491 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 2005485246
-Tempo: 418332465201 ns
+Determinante: 1112224816
+Tempo: 410240425255 ns
+Tempo: 410240 ms
 
 Tentativa 3
 
-11 9 12 6 2 1 12 8 12 8 1 11 4 
-4 0 6 11 12 5 0 10 4 1 11 1 3 
-6 10 7 4 12 1 3 5 5 7 8 0 10 
-9 0 9 7 4 7 6 11 1 4 12 9 8 
-2 12 5 11 1 4 9 2 0 5 5 8 2 
-12 0 12 5 0 4 7 0 5 2 1 3 3 
-6 12 5 2 10 10 11 10 2 10 12 12 0 
-7 0 5 0 0 10 2 1 3 6 2 3 5 
-0 9 0 1 4 5 6 5 2 1 5 3 2 
-4 9 3 2 12 1 4 9 1 12 5 8 2 
-3 2 4 0 2 2 0 11 10 11 0 1 2 
-5 2 1 12 8 3 6 9 6 7 11 12 11 
-7 11 7 8 3 3 11 5 5 5 11 9 5 
+1 5 2 1 12 1 12 2 2 1 3 4 0 
+4 2 6 5 5 7 3 9 4 12 9 8 7 
+10 4 11 1 1 1 9 4 0 6 9 9 0 
+3 10 9 12 12 0 5 1 1 4 9 9 7 
+0 2 0 11 9 0 12 0 10 2 2 5 10 
+9 0 4 4 6 7 5 8 12 7 1 6 12 
+3 8 4 6 12 3 7 5 6 1 0 5 4 
+10 10 12 7 6 10 2 9 2 3 9 11 2 
+6 2 8 12 3 11 0 11 3 6 11 11 12 
+7 7 4 5 1 12 11 1 9 5 8 6 11 
+1 6 7 5 12 7 2 3 9 7 6 4 12 
+11 12 6 7 0 6 11 0 2 2 5 0 2 
+0 6 5 4 2 11 2 12 4 4 8 2 12 
 
 Calculando usando algoritmo baseline
-Determinante: 1546852750
-Tempo: 1079508303004 ns
+Determinante: 1254925098
+Tempo: 1101266217301 ns
+Tempo: 1101266 ms
 
 Calculando usando algoritmo otimizado - vesao 1
-Determinante: 1546852750
-Tempo: 280837917442 ns
+Determinante: 1254925098
+Tempo: 341475143877 ns
+Tempo: 341476 ms
 
 Calculando usando algoritmo otimizado - vesao 2
-Determinante: 1546852750
-Tempo: 275669937254 ns
+Determinante: 1254925098
+Tempo: 342476311062 ns
+Tempo: 342476 ms
 
