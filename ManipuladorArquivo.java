@@ -1,17 +1,13 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class ManipuladorArquivo {
     private String path;
 
     public ManipuladorArquivo(String filename) throws IOException {
         /* Define o path para */
-        Path diretorioRaiz = Paths.get(System.getProperty("user.dir"));
-        Path diretorioSaida = diretorioRaiz.resolve("saida");
-        this.setPath(diretorioSaida.resolve(filename).toString());
+        this.setPath(filename);
         this.limparArquivo();
     }
 
