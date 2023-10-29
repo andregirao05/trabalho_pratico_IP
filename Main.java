@@ -9,13 +9,13 @@ class Main{
         int[] ordens = { 3, 5, 7, 9, 11, 13};
         int quantidadeMatrizes = ordens.length;
 
-        ManipuladorArquivo arquivoBaselineNanossegundos = new ManipuladorArquivo("saida_baseline_em_ns.txt");
-        ManipuladorArquivo arquivoOtimizacaoV1Nanossegundos = new ManipuladorArquivo("saida_otimizacao_v1_em_ns.txt");
-        ManipuladorArquivo arquivoOtimizacaoV2Nanossegundos = new ManipuladorArquivo("saida_otimizacao_v2_em_ns.txt");
+        ManipuladorArquivo arquivoBaselineNanossegundos = new ManipuladorArquivo("saida_baseline_ns.txt");
+        ManipuladorArquivo arquivoOtimizacaoV1Nanossegundos = new ManipuladorArquivo("saida_otimizacao_v1_ns.txt");
+        ManipuladorArquivo arquivoOtimizacaoV2Nanossegundos = new ManipuladorArquivo("saida_otimizacao_v2_ns.txt");
 
         ManipuladorArquivo arquivoBaselineMilissegundos = new ManipuladorArquivo("saida_baseline_ms.txt");
-        ManipuladorArquivo arquivoOtimizacaoV1Milissegundos = new ManipuladorArquivo("saida_otimizacao_v1_em_ms.txt");
-        ManipuladorArquivo arquivoOtimizacaoV2Milissegundos = new ManipuladorArquivo("saida_otimizacao_v2_em_ms.txt");
+        ManipuladorArquivo arquivoOtimizacaoV1Milissegundos = new ManipuladorArquivo("saida_otimizacao_v1_ms.txt");
+        ManipuladorArquivo arquivoOtimizacaoV2Milissegundos = new ManipuladorArquivo("saida_otimizacao_v2_ms.txt");
 
         for (int i = 0; i < quantidadeMatrizes; i++) {
             ordem = ordens[i];
