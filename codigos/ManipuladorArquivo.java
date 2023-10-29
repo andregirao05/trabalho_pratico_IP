@@ -1,12 +1,17 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ManipuladorArquivo {
     private String path;
 
-    public ManipuladorArquivo(String path) throws IOException {
-        this.setPath(path);
+    public ManipuladorArquivo(String filename) throws IOException {
+        /* Define o path para */
+        Path diretorioRaiz = Paths.get(System.getProperty("user.dir"));
+        Path diretorioSaida = diretorioRaiz.resolve("saida");
+        this.setPath(diretorioSaida.resolve(filename).toString());
         this.limparArquivo();
     }
 
@@ -41,12 +46,4 @@ public class ManipuladorArquivo {
         FileWriter fileWriter = new FileWriter(this.getPath());
         fileWriter.close();
     }
-
-    public static void main(String[] args) throws IOException {
-        ManipuladorArquivo arquivo = new ManipuladorArquivo("teste.txt");
-        arquivo.escreverComNovaLinha("oi");
-        arquivo.escreverComNovaLinha("qualquer coisa");
-    }
-
-
 }

@@ -168,9 +168,9 @@ class Matriz{
 		return det;
 	}
 
-//---------------------------------OTIMIZACAO BASICA-------------------------------
+	//---------------------------------OTIMIZACAO BASICA-------------------------------
 
-	public int[] buscaZeros(Matriz matriz){
+	public Vetor buscaZeros(Matriz matriz){
 	
 		int linhaComMaisZeros = 0;
 	    int maxZerosLinha = 0;
@@ -205,22 +205,19 @@ class Matriz{
 			}
 		}
 
-		int[] vet = new int[2];
+		Vetor vet = new Vetor(2);
 
 		if(maxZerosColunas < maxZerosLinha){
-			vet[0] = linhaComMaisZeros; //indica indice da linha
-			vet[1] = 0; // indicador de linha
+			vet.setElemento(0, linhaComMaisZeros); //indica indice da linha
+			vet.setElemento(0, 0); // indicador de linha
 		} else{
-			vet[0] = colunaComMaisZeros; //indica indice da coluna
-			vet[1] = 1; // indicador de  coluna
+			vet.setElemento(0, colunaComMaisZeros); //indica indice da linha
+			vet.setElemento(0, 1); // indicador de linha
 		}
 
 
 		return vet;
 	}
-
-
-
 
 	private int detOrdemNOtimizadoV1(Matriz mat){
 		int sinal,cofator,detTemp,resposta, numL, numC, indexFixo, cont;
@@ -229,11 +226,11 @@ class Matriz{
 		numC = mat.getTamanhoColuna();
 		
 		resposta = 0;
-		int[] verifica = mat.buscaZeros(mat);
+		Vetor verifica = mat.buscaZeros(mat);
 
-		indexFixo = verifica[0];
+		indexFixo = verifica.getElemento(0);
 
-		if (verifica[1] == 0) { //Percorrer linha
+		if (verifica.getElemento(1) == 0) { //Percorrer linha
 			for(cont = 0; cont < mat.getTamanhoColuna(); cont++){
 				cofator = mat.getValor(indexFixo, cont);
 				if(cofator != 0) {
@@ -260,30 +257,35 @@ class Matriz{
 		return (resposta);
 	}
 
-	public int determinanteOtimizadoV1(){
-		int ordem,det;
+	public int determinanteOtimizadoV1() {
+		int ordem, det;
 
 		ordem = this.retorneOrdem();
 		det = 0;
 
-		if(ordem > 0){
+		if (ordem > 0) {
 			switch (ordem) {
-			    case 1:  det = this.detOrdem1(this);
-				     break;
-			    case 2:  det = this.detOrdem2(this);;
-				     break;
-			    default: det = this.detOrdemNOtimizadoV1(this);;
-				     break;
+				case 1:
+					det = this.detOrdem1(this);
+					break;
+				case 2:
+					det = this.detOrdem2(this);
+					;
+					break;
+				default:
+					det = this.detOrdemNOtimizadoV1(this);
+					;
+					break;
 			}
-			
-		}
-		else{
+
+		} else {
 			System.out.println("Matriz nao eh quadrada!! retornando 0");
 		}
 
 		return det;
 	}
-//---------------------------------OTIMIZACAO EXTRA-------------------------------
+	
+	//---------------------------------OTIMIZACAO EXTRA-------------------------------
 	
 	public boolean comparaLinhas(int linha1, int linha2) {
 		boolean ehProporcional = true;

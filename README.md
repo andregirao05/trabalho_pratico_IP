@@ -26,11 +26,11 @@ O programa para cálculo do determinante funciona da seguinte forma:
 Para executar o programa principal, basta os comandos:
 
 ```
-javac Main.java
+javac -d bin codigos/*.java
 ```
 
 ```
-java Main
+java -cp bin Main
 ```
 
 ## Script para criação de gráficos
@@ -47,10 +47,12 @@ pip install -r requirements.txt
 
 # Arquivos de saída
 
-Optamos por deixar neste repositório os arquivos de saída dos algoritmos. São eles: `saida_baseline.txt`, `saida_otimizacao_v1.txt` e `saida_otimizacao_v2.txt`.
+Optamos por deixar neste repositório os arquivos de saída dos algoritmos para fins de inspeção dos resultados obtidos no experimento (diretório "saida"). São eles:
+
+- Em nanossegundos: `saida_baseline_ns.txt`, `saida_otimizacao_v1_ns.txt` e `saida_otimizacao_v2_ns.txt`;
+- Em milissegundos: `saida_baseline_ms.txt`, `saida_otimizacao_v1_ms.txt` e `saida_otimizacao_v2_ms.txt`.
 
 Os arquivos apresentam o seguinte formato:
 
 - Possuem uma linha para cada ordem matricial executada (3, 5, 7, 9, 11 e 13);
-- Há três colunas, uma para cada execução;
-- Todos os valores estão expressos em nanossegundos.
+- Há três colunas, uma para cada execução.
