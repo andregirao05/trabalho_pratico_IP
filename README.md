@@ -23,11 +23,25 @@ O programa para cálculo do determinante funciona da seguinte forma:
 
 ## Execução
 
-Para executar o programa principal, basta os comandos:
+### Compilação
+
+Para o programa principal, basta o comandos:
+
+Para o **LINUX**:
 
 ```
 javac -d bin codigos/*.java
 ```
+
+Para o **WINDOWS**:
+
+```
+javac -d bin codigos\*.java
+```
+
+### Execução
+
+Para executar, use o comando abaixo:
 
 ```
 java -cp bin Main
