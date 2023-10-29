@@ -63,8 +63,8 @@ pip install -r requirements.txt
 
 Optamos por deixar neste repositório os arquivos de saída dos algoritmos para fins de inspeção dos resultados obtidos no experimento (diretório "saida"). São eles:
 
-- Em nanossegundos: `saida_baseline_ns.txt`, `saida_otimizacao_v1_ns.txt` e `saida_otimizacao_v2_ns.txt`;
-- Em milissegundos: `saida_baseline_ms.txt`, `saida_otimizacao_v1_ms.txt` e `saida_otimizacao_v2_ms.txt`.
+- Em nanossegundos: `baseline_ns.txt`, `otimizacao_v1_ns.txt` e `otimizacao_v2_ns.txt`;
+- Em milissegundos: `baseline_ms.txt`, `otimizacao_v1_ms.txt` e `otimizacao_v2_ms.txt`.
 
 Os arquivos apresentam o seguinte formato:
 
