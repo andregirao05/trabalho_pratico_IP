@@ -270,11 +270,9 @@ class Matriz{
 					break;
 				case 2:
 					det = this.detOrdem2(this);
-					;
 					break;
 				default:
 					det = this.detOrdemNOtimizadoV1(this);
-					;
 					break;
 			}
 
@@ -370,9 +368,50 @@ class Matriz{
 		return ehProporcional;
 	}
 
+	public int detOrdemNOtimizadoV2(Matriz mat) {
+		int sinal, cofator, detTemp, resposta, numL, numC, indexFixo, cont;
+		
+		resposta = 0;
+
+		if (!mat.linhasSaoProporcionais(mat) && !mat.colunasSaoProporcionais(mat)) {
+			Matriz matmenor;
+			numL = mat.getTamanhoLinha();
+			numC = mat.getTamanhoColuna();
+			
+			Vetor verifica = mat.buscaZeros(mat);
+
+			indexFixo = verifica.getElemento(0);
+
+			if (verifica.getElemento(1) == 0) { //Percorrer linha
+				for(cont = 0; cont < mat.getTamanhoColuna(); cont++){
+					cofator = mat.getValor(indexFixo, cont);
+					if(cofator != 0) {
+						sinal = this.calculaSinal(indexFixo, cont);
+						matmenor = new Matriz(numL - 1, numC - 1);
+						mat.copiaMatrizMaiorParaMenor(mat, matmenor, indexFixo, cont);
+						detTemp = matmenor.determinanteOtimizadoV2();
+						resposta = resposta + (cofator * sinal * detTemp);
+					}
+				}
+			} else { //verifica[1] == 1 --> Percorrer coluna
+				for(cont = 0; cont < mat.getTamanhoLinha(); cont++){
+					cofator = mat.getValor(cont, indexFixo);
+					if(cofator != 0) {
+						sinal = this.calculaSinal(cont, indexFixo);
+						matmenor = new Matriz(numL - 1, numC - 1);
+						mat.copiaMatrizMaiorParaMenor(mat, matmenor, cont, indexFixo);
+						detTemp = matmenor.determinanteOtimizadoV2();
+						resposta = resposta + (cofator * sinal * detTemp);
+					}
+				}
+			}
+		}
+		
+		return (resposta);
+	}
 
 	public int determinanteOtimizadoV2(){
-		int ordem,det;
+		int ordem, det;
 
 		ordem = this.retorneOrdem();
 		det = 0;
@@ -384,7 +423,7 @@ class Matriz{
 				    	break;
 			    	case 2:  det = this.detOrdem2(this);;
 				    	break;
-			   		default: det = this.detOrdemNOtimizadoV1(this);;
+			   		default: det = this.detOrdemNOtimizadoV2(this);;
 				    	break;
 				}
 			}
