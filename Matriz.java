@@ -417,15 +417,13 @@ class Matriz{
 		det = 0;
 
 		if(ordem > 0 ){
-			if (!this.linhasSaoProporcionais(this) && !this.colunasSaoProporcionais(this)) {
-				switch (ordem) {
-			    	case 1:  det = this.detOrdem1(this);
-				    	break;
-			    	case 2:  det = this.detOrdem2(this);;
-				    	break;
-			   		default: det = this.detOrdemNOtimizadoV2(this);;
-				    	break;
-				}
+			switch (ordem) {
+				case 1:  det = this.detOrdem1(this);
+					break;
+				case 2:  det = this.detOrdem2(this);;
+					break;
+				default: det = this.detOrdemNOtimizadoV2(this);;
+					break;
 			}
 		} else {
 			System.out.println("Matriz nao eh quadrada!! retornando 0");
